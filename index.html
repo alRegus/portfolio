@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="shortcut icon" type="image/png" href="img/frontend-icon.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <select class="lang-selector">
+      <option value="eng" selected="selected">ENG</option>
+      <option value="ru">RU</option>
+    </select>
+
+    <section class="about block" onclick="widen(this, event)">
+      <div class="content-shrink active">
+        <h2 data-lang="eng">.about( )</h2>
+        <h2 data-lang="ru">обо.мне( )</h2>
+      </div>
+      <div class="content-wide">
+        <div class="about-content">
+          <h2 data-lang="eng">About me</h2>
+          <h2 data-lang="ru">Обо мне</h2>
+          <p data-lang="eng">
+            Hello! My name is Alex and i`m front-end developer. I enjoy building
+            websites from simple to rich with functionality and interactivity. I
+            am in search for a team of professional to work, get experience and
+            sharpen my skills.
+          </p>
+          <p data-lang="ru">
+            Добрый День! Меня зовут Александр и я front-end разработчик. Мне
+            нравится создавать веб-сайты от простых до богатых функционалом и
+            интерактивностью. Я в поиске команды профессионалов для работы,
+            получения опыта и отточить свои навики.
+          </p>
+        </div>
+        <button class="back-btn" onclick="shrinken(this, event)">
+          <i class="fas fa-long-arrow-alt-left"></i>
+        </button>
+        <button
+          class="work-btn"
+          onclick="changeBl(this, event)"
+          data-lang="eng"
+          data-block="work"
+        >
+          projects
+        </button>
+        <button
+          class="something-btn"
+          onclick="changeBl(this, event)"
+          data-lang="eng"
+          data-block="something"
+        >
+          contacts
+        </button>
+        <button
+          class="work-btn"
+          onclick="changeBl(this, event)"
+          data-lang="ru"
+          data-block="work"
+        >
+          проекты
+        </button>
+        <button
+          class="something-btn"
+          onclick="changeBl(this, event)"
+          data-lang="ru"
+          data-block="something"
+        >
+          контакты
+        </button>
+      </div>
+    </section>
+
+    <section class="something block" onclick="widen(this, event)">
+      <div class="content-shrink active">
+        <h2 data-lang="eng">{contacts}</h2>
+        <h2 data-lang="ru">{контакты}</h2>
+      </div>
+      <div class="content-wide">
+        <div class="contacts-container">
+          <form>
+            <div class="contact-user">
+              <div>
+                <label for="name"></label>
+                <input type="text" id="name" name="name" required />
+              </div>
+              <div>
+                <label for="email"></label>
+                <input type="email" id="email" name="email" required />
+              </div>
+            </div>
+            <div>
+              <label for="msg"></label> <br />
+              <textarea
+                id="msg"
+                cols="30"
+                rows="10"
+                name="message"
+                required
+              ></textarea>
+            </div>
+            <button type="submit" id="btn-submit"></button>
+          </form>
+        </div>
+        <button class="back-btn" onclick="shrinken(this, event)">
+          <i class="fas fa-long-arrow-alt-left"></i>
+        </button>
+        <button
+          class="work-btn"
+          onclick="changeBl(this, event)"
+          data-lang="eng"
+          data-block="work"
+        >
+          projects
+        </button>
+        <button
+          class="about-btn"
+          onclick="changeBl(this, event)"
+          data-lang="eng"
+          data-block="about"
+        >
+          about
+        </button>
+        <button
+          class="work-btn"
+          onclick="changeBl(this, event)"
+          data-lang="ru"
+          data-block="work"
+        >
+          проекты
+        </button>
+        <button
+          class="about-btn"
+          onclick="changeBl(this, event)"
+          data-lang="ru"
+          data-block="about"
+        >
+          обо мне
+        </button>
+      </div>
+    </section>
+
+    <section class="work block" onclick="widen(this, event)">
+      <div class="content-shrink active">
+        <h2 data-lang="eng">@projects</h2>
+        <h2 data-lang="ru">@проекты</h2>
+      </div>
+      <div class="content-wide">
+        <button class="back-btn" onclick="shrinken(this, event)">
+          <i class="fas fa-long-arrow-alt-left"></i>
+        </button>
+        <button
+          class="about-btn"
+          onclick="changeBl(this, event)"
+          data-lang="eng"
+          data-block="about"
+        >
+          about
+        </button>
+        <button
+          class="something-btn"
+          onclick="changeBl(this, event)"
+          data-lang="eng"
+          data-block="something"
+        >
+          contacts
+        </button>
+        <button
+          class="about-btn"
+          onclick="changeBl(this, event)"
+          data-lang="ru"
+          data-block="about"
+        >
+          обо мне
+        </button>
+        <button
+          class="something-btn"
+          onclick="changeBl(this, event)"
+          data-lang="ru"
+          data-block="something"
+        >
+          контакты
+        </button>
+
+        <div class="website">
+          <div class="website-image">
+            <img src="./img/portfolio.jpg" alt="website" />
+          </div>
+          <div class="website-descr">
+            <div class="website-descr-tools">
+              <span>HTML</span>
+              <span>Sass</span>
+              <span>JavaScript</span>
+            </div>
+            <div class="website-descr-about" data-lang="eng">
+              Portfolio website with all projects gathered in one place, with
+              two languages and a message form that sends an email.
+            </div>
+            <div class="website-descr-about" data-lang="ru">
+              Сайт с портфолио, где собраны все проекты в одном месте.Также
+              реализованно множество языков и форма для отправки сообщения на
+              электроннаю почту.
+            </div>
+            <div class="website-descr-links">
+              <a
+                href="https://github.com/alRegus/portfolio"
+                class="website-links-descr-source"
+                target="_blank"
+                data-lang="eng"
+                >source code</a
+              >
+
+              <a
+                href="https://github.com/alRegus/portfolio"
+                class="website-links-descr-source"
+                target="_blank"
+                data-lang="ru"
+                >исходный код</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="website">
+          <div class="website-image">
+            <img src="./img/greasemusic.png" alt="website" />
+          </div>
+          <div class="website-descr">
+            <div class="website-descr-tools">
+              <span>ReactJS</span>
+              <span>Sass</span>
+              <span>Firebase</span>
+            </div>
+            <div class="website-descr-about" data-lang="eng">
+              A non existent musical instruments online shop build with ReactJS
+              and firebase as the database. In source code on github there is a
+              data.json file to represent how data is stored in database.
+            </div>
+            <div class="website-descr-about" data-lang="ru">
+              Несуществующий онлайн магазин музыкальных инструментов созданный
+              при помощи ReactJS и firebase в качестве базы данных. В исходном
+              коде, в гитхабе есть файл data.json, который десонстрирует как
+              данные хранятся в базе данных.
+            </div>
+            <div class="website-descr-links">
+              <a
+                href="https://greasemusic.netlify.app"
+                target="_blank"
+                class="website-links-descr-website"
+                data-lang="eng"
+                >website</a
+              >
+              <a
+                href="https://github.com/alRegus/grease"
+                target="_blank"
+                class="website-links-descr-source"
+                data-lang="eng"
+                >source code</a
+              >
+
+              <a
+                href="https://greasemusic.netlify.app"
+                target="_blank"
+                class="website-links-descr-website"
+                data-lang="ru"
+                >веб сайт</a
+              >
+              <a
+                href="https://github.com/alRegus/grease"
+                target="_blank"
+                class="website-links-descr-source"
+                data-lang="ru"
+                >исходный код</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="website">
+          <div class="website-image">
+            <img src="./img/moviestream.jpg" alt="website" />
+          </div>
+          <div class="website-descr">
+            <div class="website-descr-tools">
+              <span>ReactJS</span>
+              <span>Sass</span>
+              <span>Heroku</span>
+            </div>
+            <div class="website-descr-about" data-lang="eng">
+              Non existent streaming service build with reactJs and a custom API
+              (using JSON server and heroku). Instead of real movies there are
+              youtube trailer of those movies.
+            </div>
+            <div class="website-descr-about" data-lang="ru">
+              Несуществующий стриминговый сервис построеный с использованием
+              реакта и собственного API (с использованием JSON server и
+              heroku).Вместо реальных филмов показывает его трейлер с ютуба.
+            </div>
+            <div class="website-descr-links">
+              <a
+                href="https://dbostream.netlify.app"
+                target="_blank"
+                class="website-links-descr-website"
+                data-lang="eng"
+                >website</a
+              >
+              <a
+                href="https://github.com/alRegus/dbostream"
+                target="_blank"
+                class="website-links-descr-source"
+                data-lang="eng"
+                >source code</a
+              >
+
+              <a
+                href="https://dbostream.netlify.app"
+                target="_blank"
+                class="website-links-descr-website"
+                data-lang="ru"
+                >веб сайт</a
+              >
+              <a
+                href="https://github.com/alRegus/dbostream"
+                target="_blank"
+                class="website-links-descr-source"
+                data-lang="ru"
+                >исходный код</a
+              >
+            </div>
+            <br />
+            <div class="website-descr-links">
+              <a
+                href="https://my-film-api-for-projects.herokuapp.com/data"
+                target="_blank"
+                class="website-links-descr-website"
+                data-lang="eng"
+                >custom api</a
+              >
+              <a
+                href="https://github.com/alRegus/movie-api"
+                target="_blank"
+                class="website-links-descr-source"
+                data-lang="eng"
+                >api source</a
+              >
+
+              <a
+                href="https://my-film-api-for-projects.herokuapp.com/data"
+                target="_blank"
+                class="website-links-descr-website"
+                data-lang="ru"
+                >свой апи</a
+              >
+              <a
+                href="https://github.com/alRegus/movie-api"
+                target="_blank"
+                class="website-links-descr-source"
+                data-lang="ru"
+                >исходник апи</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="website">
+          <div class="website-image">
+            <img src="./img/frontend.jpg" alt="website" />
+          </div>
+          <div class="website-descr">
+            <div class="website-descr-tools">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+            </div>
+            <div class="website-descr-about" data-lang="eng">
+              A single page application about front-end tools and programming
+              language with a simple quiz about JavaScript.
+            </div>
+            <div class="website-descr-about" data-lang="ru">
+              Одностраничное приложение об инструментах и языке программирования
+              для front-end разработки c простым опросом о JavaScript.
+            </div>
+            <div class="website-descr-links">
+              <a
+                href="https://alregus.github.io/frontend-info/"
+                target="_blank"
+                class="website-links-descr-website"
+                data-lang="eng"
+                >website</a
+              >
+              <a
+                href="https://github.com/alRegus/frontend-info"
+                target="_blank"
+                class="website-links-descr-source"
+                data-lang="eng"
+                >source code</a
+              >
+
+              <a
+                href="https://alregus.github.io/frontend-info/"
+                target="_blank"
+                class="website-links-descr-website"
+                data-lang="ru"
+                >веб сайт</a
+              >
+              <a
+                href="https://github.com/alRegus/frontend-info"
+                target="_blank"
+                class="website-links-descr-source"
+                data-lang="ru"
+                >исходный код</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="website">
+          <div class="website-image">
+            <img src="./img/vasio.jpg" alt="website" />
+          </div>
+          <div class="website-descr">
+            <div class="website-descr-tools">
+              <span>HTML</span>
+              <span>Sass</span>
+              <span>JavaScript</span>
+            </div>
+            <div class="website-descr-about" data-lang="eng">
+              A landing page about non existent watch firm with animation, modal
+              windows and a slider.
+            </div>
+            <div class="website-descr-about" data-lang="ru">
+              Посадочная страница о несуществующей фирме часов с анимациями,
+              модальными окнами и слайдером.
+            </div>
+            <div class="website-descr-links">
+              <a
+                href="https://alregus.github.io/vasio/"
+                target="_blank"
+                class="website-links-descr-website"
+                data-lang="eng"
+                >website</a
+              >
+              <a
+                href="https://github.com/alRegus/vasio"
+                target="_blank"
+                class="website-links-descr-source"
+                data-lang="eng"
+                >source code</a
+              >
+
+              <a
+                href="https://alregus.github.io/vasio/"
+                target="_blank"
+                class="website-links-descr-website"
+                data-lang="ru"
+                >веб сайт</a
+              >
+              <a
+                href="https://github.com/alRegus/vasio"
+                target="_blank"
+                class="website-links-descr-source"
+                data-lang="ru"
+                >исходный код</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>

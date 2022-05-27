@@ -1,0 +1,50 @@
+.contacts-container
+    position: relative
+    margin: 0 auto
+    .contact-user
+        display: flex
+        flex-direction: column
+        div
+            margin: 20px 0
+            input
+                width: 100%
+                border-top: none
+                border-right: none
+                border-left: none
+                border-bottom: 2px solid #9914ce
+                padding: 5px 12px
+                &:focus
+                    outline: none
+                    border-bottom: 2px solid #d46ffc7a
+    textarea
+        resize: none
+        padding: 10px
+        width: 500px
+        border-radius: 10px
+        border: 1px solid #b1b1b1
+        margin-top: 10px
+        &:focus
+            outline: none
+            border: 1px solid #d46ffc7a
+            box-shadow: 0px 0px 18px #d46ffc7a
+
+    button
+        position: static !important
+        padding: 9px 12px
+        font-size: 17px
+        border: none
+        border-radius: 4px
+        background-color: #9914ce
+        color: #fff
+        margin-top: 20px
+        &:hover
+            background-color: #b71bf5
+        &:active
+            transform: scale(0.9)
+    .thank-you
+        position: absolute
+        right: 0
+        bottom: 7px
+        font-weight: bold
+        color: #90626b
+        text-transform: uppercase
